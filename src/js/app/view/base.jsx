@@ -77,9 +77,7 @@ define(function(require) {
 
       return (
         <div onClick={this.onLinkClick} className="base">
-          <div className="content">
-            {content}
-          </div>
+          {content}
         </div>
       );
     },
