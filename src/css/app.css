@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 4px;
+  background: white;
+}
+
+li + li {
+  border-top: 1px solid lightgrey;
+}
+
+.base {
+  max-width: 450px;
+  margin: 0 auto;
+  background: lightgrey;
+  padding: 5px;
+}
+
+li {
+  display: table;
+  width: 100%;
+}
+
+li > * {
+  display: table-cell;
+}
+
+.name {
+  width: 25%;
+}
+
+.age {
+  width: 15%;
+}
+
+.link {
+  width: 30px;
+}
+
+.detail {
+  padding: 2px;
+  background: white;
+}
+
+.detail p {
+  margin-bottom: 3px;
+}
