@@ -19,14 +19,14 @@ define(function(require) {
   var BaseView = React.createClass({
 
     getInitialState: function() {
-      var itemCollection = new ItemCollection(),
+      var collection = new ItemCollection(),
         fetching = true;
 
       return {
         path: null,
         pathParts: null,
         router: new Router(),
-        itemCollection: itemCollection,
+        collection: collection,
         fetching: fetching
       };
     },
@@ -38,13 +38,13 @@ define(function(require) {
     },
 
     componentDidMount: function() {
-      this.state.itemCollection.on("sync", function() {
+      this.state.collection.on("sync", function() {
         this.setState({
           fetching: false
         });
       }, this);
 
-      this.state.itemCollection.fetch();
+      this.state.collection.fetch();
     },
 
     render: function() {
@@ -61,14 +61,14 @@ define(function(require) {
 
       if (this.state.path === "list") {
         content = new React.createFactory(ItemListPageView)({
-          collection: this.state.itemCollection
+          collection: this.state.collection
         });
       } else if (this.state.path === "detail") {
-        if (!this.state.itemCollection.get(itemId)) {
+        if (!this.state.collection.get(itemId)) {
           content = (<p><br/>Item not found</p>);
         } else {
           content = new React.createFactory(ItemDetailPageView)({
-            model: this.state.itemCollection.get(itemId)
+            model: this.state.collection.get(itemId)
           });
         }
       } else {
