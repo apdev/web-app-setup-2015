@@ -11,7 +11,7 @@ define(function(require) {
    *
    *
    */
-  var ItemListPage = React.createClass({
+  var ItemDetailPage = React.createClass({
 
     getInitialState: function() {
       return {
@@ -35,7 +35,7 @@ define(function(require) {
       );
     }
 
-  }); // end ItemListPage
+  }); // end ItemDetailPage
 
-  return ItemListPage;
+  return ItemDetailPage;
 });
