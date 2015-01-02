@@ -4,8 +4,6 @@ define(function(require) {
 
   var React = require("react");
 
-  var ListItemView= require("jsx!app/view/list_item");
-
   /**
    *
    *
