@@ -1,8 +1,8 @@
-# Web Application Skeleton 2015
+# Web Application Skeleton
 
 ![image](http://stream1.gifsoup.com/view3/4264368/this-is-how-we-do-it-o.gif)
 
-Our current setup for web apps. Uses require, backbone and react.
+Our current setup for web apps. Uses [RequireJS](http://requirejs.org/), [Backbone.js](http://backbonejs.org/) and [React](http://facebook.github.io/react/).
 
 ## How to run
 
